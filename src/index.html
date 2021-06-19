@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Bin2Dec</title>
+</head>
+<body>
+	<header class="header">
+		<h1 class="header__title">Binário para Decimal</h1>
+	</header>
+	<main class="container">
+		<section class="info">
+			<form class="form">
+				<input data-binary class="form__input" type="text" name="binary" id="binary" placeholder="Insira o número binário">
+				<button data-btn class="form__btn">ver resultado</button>
+			</form>
+		</section>
+		<section class="result">
+			<p data-result class="result__text">0</p>
+		</section>
+	</main>
+	<script src="js/business.js"></script>
+    <script src="js/controller.js"></script>
+	<script>
+		const binary = Binary()
+        const binaryController = BinToDecController(binary)
+		
+        binaryController.init()
+	</script>
+</body>
+</html>
